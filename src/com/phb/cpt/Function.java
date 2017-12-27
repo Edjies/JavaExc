@@ -1,5 +1,9 @@
 package com.phb.cpt;
-
+/**
+ * Java中的方法
+ * @author hubble
+ *
+ */
 public class Function {
 	
 	public static void main(String[] args) {

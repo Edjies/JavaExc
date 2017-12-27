@@ -1,7 +1,11 @@
 package com.phb.exc;
 
 import java.util.Random;
-
+/**
+ * 
+ * @author hubble
+ * @date 2017-12-26
+ */
 public class Test1 {
 	/**
 	 * 随机生成一个[0, bound)范围内整数
@@ -37,13 +41,14 @@ public class Test1 {
 	
 	
 	/**
-	 * 在Java中，char类型描述了UTF-16编码中的一个代码单兀.
+	 * 在Java中，char类型描述了UTF-16编码中的一个代码单兀.(理解)
 	 * char 类型操作
 	 */
 	public void charOpt(String l) {
-		System.out.println(Math.pow(2, 16) - 1); // char值最大的表示范围 65535
+		int maxChar = (int) Math.pow(2, 16) - 1; // char值最大的表示范围 65535
 		char a = 97;
 		char z = 97 + 25;
+		char 潘 = 28504;
 		System.out.println(a);  //  写出打印结果
 		System.out.println(z);  //   写出打印结果
 	}
@@ -68,27 +73,27 @@ public class Test1 {
 	}
 	
 	
-	/**
-	 * 说明:
-	 *   翻转字符串,  如给定 c = ['H', 'E', 'L', 'L', 'O'],  返回  c = ['O', 'L', 'L', 'E', 'H']
-	 * 要求:
-	 *   无
-	 * @param s
-	 */
-	public static void reverseString(char[] s) {
-		// TODO
-	}
-	
-	/**
-	 * 说明:
-	 *   翻转字符串,  如给定 c = ['H', 'E', 'L', 'L', 'O'],  返回  c = ['O', 'L', 'L', 'E', 'H']
-	 * 要求:
-	 *   不允许创建新的数组, 在原有数组上操作
-	 * @param s
-	 */
-	public static void reverseString2(char[] s) {
-		// TODO
-	}
+//	/**
+//	 * 说明:
+//	 *   翻转字符串,  如给定 c = ['H', 'E', 'L', 'L', 'O'],  返回  c = ['O', 'L', 'L', 'E', 'H']
+//	 * 要求:
+//	 *   无
+//	 * @param s
+//	 */
+//	public static void reverseString(char[] s) {
+//		// TODO
+//	}
+//	
+//	/**
+//	 * 说明:
+//	 *   翻转字符串,  如给定 c = ['H', 'E', 'L', 'L', 'O'],  返回  c = ['O', 'L', 'L', 'E', 'H']
+//	 * 要求:
+//	 *   不允许创建新的数组, 在原有数组上操作
+//	 * @param s
+//	 */
+//	public static void reverseString2(char[] s) {
+//		// TODO
+//	}
 	
 	
 	public static void main(String[] args) {
