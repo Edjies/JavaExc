@@ -2,11 +2,11 @@ package com.phb.exc;
 
 import java.util.Random;
 /**
- * 
+ * char练习
  * @author hubble
  * @date 2017-12-26
  */
-public class Test1 {
+public class Test1_Char {
 	/**
 	 * 随机生成一个[0, bound)范围内整数
 	 * @param bound 必须 > 0,  最大随机边界

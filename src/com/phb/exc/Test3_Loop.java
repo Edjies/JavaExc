@@ -1,10 +1,10 @@
 package com.phb.exc;
 /**
- * 
+ * 循环练习
  * @author hubble
  *
  */
-public class Test3 {
+public class Test3_Loop {
 	/**
 	 * 
 	 * 用一个整数数组代表一个正整数,  将这个整数数组加1.
