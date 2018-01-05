@@ -11,8 +11,40 @@ package com.phb.cls;
  */
 public class Rectangle {
 	
+	private double width;
+	private double height;
+	
+	public Rectangle()
+	{
+		
+	}
+	
+	public Rectangle(double width,double height)
+	{
+		this.height=height;
+		this.width=width;
+	}
+	
+	public double getArea(double width,double height)
+	{
+		double s=width*height;
+		return s;
+		
+	}
+	
+	public double getPeHmeter(double width,double height)
+	{
+		double c=(width+height)*2;
+		return c;
+	}
 	
 	public static void main(String[] args) {
 		// 用于测试
+		Rectangle r=new Rectangle();
+		double s=r.getArea(2.0, 3.0);
+		double c=r.getPeHmeter(2.0, 3.0);
+		System.out.println(s);
+		System.out.println(c);
+				
 	}
 }
