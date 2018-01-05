@@ -6,10 +6,16 @@ public class Fan {
 	public static final double MEDIUM=2;
 	public static final double FAST=3;
 	
-	private int speed=(int) SLOW;
-	private boolean on=false;
-	private double radius=5;
-	private String color="blue";
+	//private int speed=(int) SLOW;
+	//private boolean on=false;
+	//private double radius=5;
+	//private String color="blue";
+	
+	private int speed;
+	private boolean on;
+	private double radius;
+	private String color;
+	
 	//四个数据域的访问器和修改器
 	public int getSpeed() {
 		return speed;
@@ -50,11 +56,11 @@ public class Fan {
 		this.radius=5;
 		this.color="blue";
 	}
-	
+	@Override 
 	public String toString()
 	{
 		String s="";
-		if(on==true)
+		if(on=true)
 		{
 			s="风扇的速度是"+speed+",风扇的颜色是"+color+",风扇的半径是"+radius;
 		}
@@ -69,15 +75,15 @@ public class Fan {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Fan f1=new Fan();
-		f1.speed=3;
+		f1.speed=(int) FAST;
 		f1.radius=10;
 		f1.color="yellow";
 		f1.on=true;
 		Fan f2=new Fan();
-		f1.speed=2;
-		f1.radius=5;
-		f1.color="blue";
-		f1.on=false;
+		f2.speed=(int) MEDIUM;
+		f2.radius=5;
+		f2.color="blue";
+		f2.on=false;
 		System.out.println(f1.toString());
 		System.out.println(f2.toString());
 		

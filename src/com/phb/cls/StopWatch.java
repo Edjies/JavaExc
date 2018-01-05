@@ -34,7 +34,8 @@ public class StopWatch {
 	 * 记录开始时间
 	 */
 	public void start() {
-		Calendar start=startTime;
+		
+		
 		
 	}
 	
@@ -42,9 +43,9 @@ public class StopWatch {
 	 * 记录结束时间, 并返回和开始时间的差值
 	 */
 	public long end() {
-		Calendar end=endTime;
-		long t=endTime.getTimeInMillis()-startTime.getTimeInMillis();
-		return t;
+		
+		
+		return c;
 	}
 	
 	public static void main(String[] args) {
