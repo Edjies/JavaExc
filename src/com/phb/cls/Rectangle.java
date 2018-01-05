@@ -16,7 +16,8 @@ public class Rectangle {
 	
 	public Rectangle()
 	{
-		
+		this.width = 0;
+		this.height = 0;
 	}
 	
 	public Rectangle(double width,double height)
