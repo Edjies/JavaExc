@@ -24,19 +24,30 @@ public class Test1_Char {
 	 * @param max
 	 * @return
 	 */
-	public static int randomInt(int bound, int min, int max) {
+	public static int randomInt(int min, int max) {
 		// TODO
-		return 0;
+		Random r = new Random();
+		return min + r.nextInt(max - min);
 	}
 	
+	
+
 	/**
 	 * 给定长度, 随机生成一个整数数组
 	 * @param length
 	 * @return
 	 */
-	public static char[] randomIntArray(int length, int min, int max) {
+	public static int[] randomIntArray(int length, int min, int max) {
 		// TODO
-		return null;
+		Random r = new Random();
+		int[] arr=new int[length];
+		for(int i=0;i<arr.length;i++)
+		{
+			int temp=min + r.nextInt(max - min);
+			arr[i]=temp;
+		}
+		return arr;
+		
 	}
 	
 	
@@ -57,8 +68,10 @@ public class Test1_Char {
 	 * 随机生成一个小写字母
 	 * @return
 	 */
-	public char randomLetter() {
-		return 0;
+	public static char randomLetter() {
+		Random r = new Random();
+		char a=(char)(97 + r.nextInt(25));
+		return a;
 	}
 	
 	
@@ -69,7 +82,20 @@ public class Test1_Char {
 	 */
 	public static char[] randomString(int length) {
 		// TODO
-		return null;
+		Random r=new Random();
+		//报java.lang.NullPointerException的原因：
+		//变量未初始化；
+		//记下来
+		//赋值为 null   不是初始化   
+		//数组的初始化都是一样的.
+		//数据类型[]   a = new 数据类型[数组长度];
+		char[] arr=new char[length];
+		for(int i=0;i<length;i++)
+		{
+			char temp=(char)(97 + r.nextInt(25));
+			arr[i]=temp;
+		}
+		return arr;
 	}
 	
 	
@@ -80,9 +106,13 @@ public class Test1_Char {
 //	 *   无
 //	 * @param s
 //	 */
-//	public static void reverseString(char[] s) {
-//		// TODO
-//	}
+	public static char[] reverseString(char[] s) {
+		char[] s1 = new char[s.length];
+		for(int i= 0; i < s.length; i++) {
+			s1[i] = s[s.length - 1 - i];
+		}
+		return s1;
+	}
 //	
 //	/**
 //	 * 说明:
@@ -91,19 +121,46 @@ public class Test1_Char {
 //	 *   不允许创建新的数组, 在原有数组上操作
 //	 * @param s
 //	 */
-//	public static void reverseString2(char[] s) {
-//		// TODO
-//	}
+	public static void reverseString2(char[] s) {
+		for(int i = 0; i < s.length / 2; i++){
+			char t = s[i];
+			s[i] = s[s.length - 1 - i];
+			s[s.length - 1 - i] = t;
+		}
+	}
 	
 	
 	public static void main(String[] args) {
-		char a = 97;
+	/*	char a = 97;
 		char z = 97 + 25;
 		System.out.println(z);
 		String s = "潘浩波";
 		char p = 28504;
 		System.out.println(p);
 		char c = 99;
+		
+		for(int i = 0; i < 100; i++){
+			System.out.println(randomInt(10, 20));
+		}
+		
+		int[] arr=randomIntArray(3,10,20);
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]);
+		}
+		
+		
+		char b=randomLetter();
+		System.out.println(b);
+		*/
+		char[] arr=randomString(3);
+		for(int i=0;i<arr.length;i++)
+		{
+			System.out.print(arr[i]);
+		}
+		
+		
+		
 	}
 
 }
