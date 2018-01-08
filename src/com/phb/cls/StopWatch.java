@@ -34,16 +34,15 @@ public class StopWatch {
 	 * 记录开始时间
 	 */
 	public void start() {
-		
-		
-		
+		 this.startTime = Calendar.getInstance();
 	}
 	
 	/**
 	 * 记录结束时间, 并返回和开始时间的差值
 	 */
 	public long end() {
-		
+		this.endTime=Calendar.getInstance();
+		long c=this.endTime.getTimeInMillis()-this.startTime.getTimeInMillis();
 		
 		return c;
 	}
@@ -51,6 +50,8 @@ public class StopWatch {
 	public static void main(String[] args) {
 		// 添加代码, 记录 下面代码的执行时间, 利用 StopWatch类
 		StopWatch sw=new StopWatch();
+		
+		sw = new StopWatch();
 		sw.start();
 		for(int i = 0; i < 10000; i++){
 			try {
@@ -60,6 +61,19 @@ public class StopWatch {
 			}
 		}
 		long l=sw.end();
+		t1();
+		
+		
 		System.out.println(l);
 	}
+	
+	
+	
+	public static StopWatch t1(){
+		StopWatch sw = new StopWatch();
+		return sw;
+	}
+	
+	
+	
 }
