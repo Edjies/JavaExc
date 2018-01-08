@@ -48,7 +48,7 @@ public class Test_5 {
 	}
 	
 	public static void main(String[] args) {
-		A a = new A();
+		A a = new A(); //调用a.set()方法
 		a.set(3);
 		System.out.println(a.i);
 		
