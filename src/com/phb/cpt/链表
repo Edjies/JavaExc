@@ -1,0 +1,35 @@
+链表
+概念：链表是一个接一个排列的元素序列，每个元素都通过一个指针链接到下一个元素。
+声明结点类：可以使用两个实例变量来实现结点的java类。一个实例变量存储元素，一个实例变量引用另一个结点。
+在java中可以在类的开头申明这两个实例变量。
+public class IntNode
+{
+	private int data;
+	private IntNode link;
+}
+头结点：IntNode head;尾结点：IntNode tail;
+在链表的头部添加新结点：head=new IntNode(newDate,head)
+从链表的头部删除结点： head=head.getLink();
+在链表的非头部位置添加新结点：
+public void addNodeAfter(int element)
+{
+	link=new IntNode(element,link);
+}
+selection.addNodeAfter(element);
+删除链表中非头部位置的结点：
+public void removeNodeAfter()
+{
+	link=link.link;
+}
+selection.removeNodeAfter();
+操作整个链表：(计算链表长度的静态方法。)
+public static int listLength(IntNode head)
+{
+	IntNode cursor;
+	int answer;
+	answer=0;
+	for(cursor=head;cursor!=null;cursor=cursor.link)
+	answer++;
+	return answer;
+	
+}
