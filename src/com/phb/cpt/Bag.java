@@ -21,7 +21,7 @@ public class Bag<T> implements Iterable<T> {
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Bag<String> bag=new Bag<>();
+		Bag<String> bag=new Bag<String>();
 		bag.add("a");
 		bag.add("b");
 		bag.add("c");
